@@ -8,6 +8,10 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
   {
+    path: "404",
+    component: NotfoundComponent,
+  },
+  {
     path: 'home',
     component: HomeComponent,
   },
@@ -24,9 +28,15 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: "**",
-    component: NotfoundComponent,
-  }
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: '404',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,13 @@
+.maincontainer {
+    min-height: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        padding: 25px;
+        border-radius: 0;
+    }
+}
