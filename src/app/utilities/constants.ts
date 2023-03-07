@@ -1,12 +1,16 @@
 import { Project } from "../models/project";
 
 
+type ProjectsDictionary = {
+    [T in string]: Project;
+}
+
 /**
  * same thing as {@link projects} but in a hashmap for easier access
  */
-export const repos = {
-    elevatorssystem: {
-        title: 'elevatorsystem',
+export const repos: ProjectsDictionary = {
+    'elevatorssystem': {
+        title: 'elevatorssystem',
         endDate: new Date('2023-06-01'),
         skills: ['Data Structures', 'Algorithms', 'Concurrent systems'],
         technologies: [],
@@ -19,7 +23,7 @@ export const repos = {
         url: 'https://github.com/carepollo/elevatorsystem',
         developmentTime: 'ongoing',
     },
-    assistant: {
+    'assistant': {
         title: 'assistant',
         endDate: new Date('2023-02-01'),
         skills: ['Concurrent systems', 'asynchronous programming'],
@@ -54,7 +58,7 @@ export const repos = {
         url: 'https://github.com/carepollo/assistant',
         developmentTime: '3 months',
     },
-    portfolioos: {
+    'portfolio-os': {
         title: 'portfolio-os',
         endDate: new Date('2023-01-01'),
         skills: ['resumability'],
@@ -79,7 +83,7 @@ export const repos = {
         url: 'https://github.com/carepollo/portfolio-os',
         developmentTime: '1 month',     
     },
-    alphacloud: {
+    'alphacloud': {
         title: 'alphacloud',
         endDate: new Date('2023-02-01'),
         skills: ['API RESTful'],
@@ -99,7 +103,7 @@ export const repos = {
         url: 'https://github.com/carepollo/alphacloud',
         developmentTime: '1 months',
     },
-    esolang: {
+    'esolang': {
         title: 'esolang',
         endDate: new Date('2022-12-01'),
         skills: ['Low level programming', 'Compilers', 'Interpreters'],
@@ -113,7 +117,7 @@ export const repos = {
         url: 'https://github.com/carepollo/esolang',
         developmentTime: '6 months',
     },
-    genericapp: {
+    'GenericApp': {
         title: 'GenericApp',
         endDate: new Date('2022-12-01'),
         skills: ['Low level programming', 'Embedded systems', 'API RESTful'],
@@ -148,7 +152,7 @@ export const repos = {
         url: 'https://github.com/carepollo/esolang',
         developmentTime: '4 months',
     },
-    schulplattform: {
+    'SchulPlattform': {
         title: 'SchulPlattform',
         endDate: new Date('2021-12-01'),
         skills: ['OOP', 'API RESTful', 'Design Patterns'],
@@ -193,7 +197,7 @@ export const repos = {
         url: 'https://github.com/carepollo/SchulPlattform',
         developmentTime: '12 months',  
     },
-    hangman: {
+    'hangman': {
         title: 'hangman',
         endDate: new Date('2020-01-01'),
         skills: ['OOP'],
@@ -213,12 +217,12 @@ export const repos = {
  * projects done
  */
 export const projects: Project[] = [
-    repos.elevatorssystem,
-    repos.assistant,
-    repos.portfolioos,
-    repos.alphacloud,
-    repos.esolang,
-    repos.genericapp,
-    repos.schulplattform,
-    repos.hangman,
+    repos['elevatorssystem'],
+    repos['assistant'],
+    repos['portfolio-os'],
+    repos['alphacloud'],
+    repos['esolang'],
+    repos['GenericApp'],
+    repos['SchulPlattform'],
+    repos['hangman'],
 ];

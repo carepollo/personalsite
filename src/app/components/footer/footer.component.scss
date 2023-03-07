@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(27, 27, 27);
+}
+
+.icon {
+    cursor: pointer;
+    margin: 10px;
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +17,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { HttpClientModule } from '@angular/common/http';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -26,8 +24,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PreviewProjectComponent } from './components/preview-project/preview-project.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatRippleModule } from '@angular/material/core';
-
-const socketConfig: SocketIoConfig = { url: '', options: {} };
 
 @NgModule({
   declarations: [
@@ -57,7 +53,6 @@ const socketConfig: SocketIoConfig = { url: '', options: {} };
     MatChipsModule,
     MatRippleModule,
 
-    SocketIoModule.forRoot(socketConfig),
     HttpClientModule,    
   ],
   providers: [
