@@ -1,1 +1,28 @@
-<p>contact works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            Contact Me
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="outline">
+                <label>Title</label>
+                <input matInput>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <label>Email</label>
+                <input matInput>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <label>Message</label>
+                <textarea cols="30" rows="10" matInput></textarea>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary">SEND</button>
+    </mat-card-actions>
+</mat-card>

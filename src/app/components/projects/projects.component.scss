@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 5px;
+
+    app-preview-project {
+        margin: 1px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .grid {        
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media (max-width: 624px) {
+    .grid {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+

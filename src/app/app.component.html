@@ -1,40 +1,16 @@
 <mat-drawer-container class="maincontainer" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="push">
-    <nav>
-      <button mat-button routerLink="/home">
-        <mat-icon>home</mat-icon>
-        Home
-      </button>
-      <button mat-button routerLink="/projects">
-        <mat-icon>add</mat-icon>
-        Projects
-      </button>
-      <button mat-button routerLink="/contact">
-        <mat-icon>mail</mat-icon>
-        Contact me
-      </button>
-    </nav>
-    
-    
+    <app-sidemenu></app-sidemenu>
   </mat-drawer>
 
   <div class="maincontainercontent">
-    <mat-toolbar color="primary">
-      <button 
-        mat-icon-button 
-        class="example-icon" 
-        (click)="drawer.toggle()" 
-        aria-label="menu" 
-        type="button"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-    </mat-toolbar>
+    <app-navbar [menu]="drawer"></app-navbar>
 
     <main>
       <router-outlet></router-outlet>
     </main>
+
+    <app-footer></app-footer>
   </div>
 
 </mat-drawer-container>
