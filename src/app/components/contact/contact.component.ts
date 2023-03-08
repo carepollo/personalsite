@@ -25,18 +25,21 @@ export class ContactComponent {
     };
   }
 
-  submit() {
+  submit(): void {
     const canSend = this.message.title.length !== 0 || this.message.contact.length !== 0 || this.message.title.length !== 0;
     
     if (canSend) {
       this.notificationsService.sendNotification(this.message)
         .subscribe({
           next: () => {
-            this.snackbarService.open('done', 'OK', {duration: 3000});
+            this.snackbarService.open('Done', 'OK', {duration: 3000});
             this.message = this.getDefaultValue();
           },
-          error: () => this.snackbarService.open('not sent, try again later', 'OK', {duration: 3000}),
+          error: () => this.snackbarService.open('Not sent, try again later', 'OK', {duration: 3000}),
         });
+      return;
     }
+
+    this.snackbarService.open('Cannot send, field not filled');
   }
 }

@@ -17,6 +17,7 @@
                         [(ngModel)]="message.title" 
                         name="title"
                         type="text"
+                        required
                     >
                 </mat-form-field>
         
@@ -27,6 +28,7 @@
                         placeholder="your email/discord tag/telegram user" 
                         [(ngModel)]="message.contact" 
                         name="email"
+                        required
                     >
                 </mat-form-field>
         
@@ -38,6 +40,7 @@
                         placeholder="your message..." 
                         [(ngModel)]="message.message" 
                         name="message"
+                        required
                     >
                     </textarea>
                 </mat-form-field>

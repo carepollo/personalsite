@@ -10,13 +10,15 @@ export class NotificationsService {
   // http://localhost:5000
   private readonly serverPath = 'http://seuetestings.eastus.cloudapp.azure.com';
 
-  constructor(private http: HttpClient) {
-    this.http.get<{ip:string}>('https://api.ipify.org/?format=json').subscribe(res => {
-      this.sendNotification({message: 'from personal site', title: 'New visitor', contact: res.ip}).subscribe();
-    });
-  }
+  constructor(private http: HttpClient) {}
 
   sendNotification(notification: Message) {
     return this.http.post<Message>(`${this.serverPath}/notify`, notification);
+  }
+
+  selfNotify() {
+    this.http.get<{ip:string}>('https://api.ipify.org/?format=json').subscribe(res => {
+      this.sendNotification({message: 'from personal site', title: 'New visitor', contact: res.ip}).subscribe();
+    });
   }
 }
