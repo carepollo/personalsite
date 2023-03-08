@@ -8,7 +8,7 @@ import { Message } from '../models/message';
 export class NotificationsService {
 
   // http://localhost:5000
-  private readonly serverPath = 'http://seuetestings.eastus.cloudapp.azure.com';
+  private readonly serverPath = 'https://seuetestings.eastus.cloudapp.azure.com';
 
   constructor(private http: HttpClient) {}
 
