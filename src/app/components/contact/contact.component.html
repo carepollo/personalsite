@@ -10,17 +10,36 @@
             <form>
                 <mat-form-field appearance="outline">
                     <label>Title</label>
-                    <input matInput placeholder="reason to contact, max 50 chars." max="50" [(ngModel)]="message.title">
+                    <input 
+                        matInput 
+                        placeholder="reason to contact, max 50 chars." 
+                        max="50" 
+                        [(ngModel)]="message.title" 
+                        name="title"
+                        type="text"
+                    >
                 </mat-form-field>
         
                 <mat-form-field appearance="outline">
                     <label>Contact method</label>
-                    <input matInput placeholder="your email/discord tag/telegram user" [(ngModel)]="message.contact">
+                    <input 
+                        matInput 
+                        placeholder="your email/discord tag/telegram user" 
+                        [(ngModel)]="message.contact" 
+                        name="email"
+                    >
                 </mat-form-field>
         
                 <mat-form-field appearance="outline">
                     <label>Message</label>
-                    <textarea rows="5" matInput placeholder="your message..." [(ngModel)]="message.message"></textarea>
+                    <textarea 
+                        rows="5" 
+                        matInput 
+                        placeholder="your message..." 
+                        [(ngModel)]="message.message" 
+                        name="message"
+                    >
+                    </textarea>
                 </mat-form-field>
             </form>
         </mat-card-content>
@@ -29,7 +48,6 @@
                 mat-raised-button
                 color="primary"
                 (click)="submit()"
-                [disabled]="getFormValidationResult()"
             >
                 SEND
             </button>

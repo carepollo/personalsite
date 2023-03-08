@@ -5,6 +5,9 @@ type HashMap<T> = {
     [Y in string]: T;
 }
 
+/**
+ * technologies registered
+ */
 export const technologies: HashMap<Technology> = {
     'go': {
         name: 'Go',

@@ -25,18 +25,18 @@ export class ContactComponent {
     };
   }
 
-  getFormValidationResult(): boolean {
-    return this.message.title.length === 0 || this.message.contact.length === 0 || this.message.title.length === 0
-  }
-
   submit() {
-    this.notificationsService.sendNotification(this.message)
-      .subscribe({
-        next: () => {
-          this.snackbarService.open('done', 'OK', {duration: 3000});
-          this.message = this.getDefaultValue();
-        },
-        error: () => this.snackbarService.open('not sent, try again later', 'OK', {duration: 3000}),
-      });
+    const canSend = this.message.title.length !== 0 || this.message.contact.length !== 0 || this.message.title.length !== 0;
+    
+    if (canSend) {
+      this.notificationsService.sendNotification(this.message)
+        .subscribe({
+          next: () => {
+            this.snackbarService.open('done', 'OK', {duration: 3000});
+            this.message = this.getDefaultValue();
+          },
+          error: () => this.snackbarService.open('not sent, try again later', 'OK', {duration: 3000}),
+        });
+    }
   }
 }

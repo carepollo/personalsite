@@ -27,6 +27,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { ContentService } from './services/content.service';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ContentService } from './services/content.service';
     MatSnackBarModule,
     HttpClientModule,
     FormsModule,
+    NgChartsModule,
   ],
   providers: [
     NotificationsService,

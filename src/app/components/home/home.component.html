@@ -1,20 +1,34 @@
 <div class="background">
     <mat-card>
         <img src="../../../assets/favicon.svg" alt="icon">
+        <canvas #figurine></canvas>
     </mat-card>
 
     <mat-card>
-        <p>
-            I am a Software Engineering student, I have experience in Web dev (Full-Stack) and I am interested in Transhumanism.
-            I love all the topics related to CS, CE and Sci-Fi, I've been coding for approximately 4 years by now. I am still looking for a specific branch to specialize in. Linux (current distro: EndeavourOS) is my main and favorite OS.
-        </p>
-        <p>
-            We can talk in English or Spanish (spoken and written) and Chinese simplified (text only)
-        </p>
+        <mat-card-header>
+            <p>
+                I am a Software Engineering student, I have experience in Web dev (Full-Stack) and I am interested in Transhumanism.
+                I love all the topics related to CS, CE and Sci-Fi, I've been coding for approximately 4 years by now. I am still looking for a specific branch to specialize in. Linux (current distro: EndeavourOS) is my main and favorite OS.
+            </p>
+            <p>
+                We can talk in English or Spanish (spoken and written) and Chinese simplified (text only)
+            </p>    
+        </mat-card-header>
+        <mat-card-content>
+            I have used the following technologies in my spare time:
+            <canvas 
+                baseChart
+                [data]="barChartData"
+                [options]="{responsive: true}"
+                [legend]="false"
+                [type]="'bar'"
+                #stats
+            >
+            </canvas>
+        </mat-card-content>
 
-        I have used the following technologies in my spare time:
-        <canvas id="canvas" #canvas></canvas>
-
-        If you want even more detailed stats about my work you can check out my github profile or my wakatime profile.
+        <mat-card-footer>
+            If you want even more detailed stats about my work you can check out my github profile or my wakatime profile.
+        </mat-card-footer>
     </mat-card>
 </div>
