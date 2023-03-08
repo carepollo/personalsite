@@ -24,6 +24,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PreviewProjectComponent } from './components/preview-project/preview-project.component';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatRippleModule } from '@angular/material/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
+import { ContentService } from './services/content.service';
 
 @NgModule({
   declarations: [
@@ -52,11 +55,13 @@ import { MatRippleModule } from '@angular/material/core';
     MatCardModule,
     MatChipsModule,
     MatRippleModule,
-
-    HttpClientModule,    
+    MatSnackBarModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [
     NotificationsService,
+    ContentService,
   ],
   bootstrap: [AppComponent]
 })
